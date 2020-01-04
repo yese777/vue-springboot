@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <!-- 弹出表单 -->
     <el-dialog title="新增数据" :visible.sync="dialogFormVisible" @close="resetForm('form')"
                :close-on-click-modal="closeOnClickModal">

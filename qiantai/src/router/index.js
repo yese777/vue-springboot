@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import Index from "../components/Index"
 import Login from "../views/Login"
 import Main from '../views/Main'
 
@@ -22,7 +23,7 @@ export default new Router({
       component: Login
     },
     {
-      // 首页
+      // 主页
       path: '/main/:name',
       props: true,
       name: 'Main',
@@ -34,14 +35,18 @@ export default new Router({
       ]
     },
     {
+      //首页
       path: '/',
-      redirect: '/login'
+      name: 'Index',
+      component: Index
     },
     {
+      //重定向到首页
       path: '/goHome',
       redirect: '/'
     },
     {
+      //错误页
       path: '*',
       component: NotFound
     }
